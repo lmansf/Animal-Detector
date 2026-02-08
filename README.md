@@ -10,6 +10,8 @@ This project uses YOLOv8 (You Only Look Once) to detect and track animals in vid
 - Training a custom YOLOv8 detector
 - Running inference on new images
 - Tracking animal positions and measuring distances traveled
+- Reviewing results in a Power BI report
+- Inspecting an example run of center-coordinate outputs
 
 ## Features
 
@@ -19,6 +21,8 @@ This project uses YOLOv8 (You Only Look Once) to detect and track animals in vid
 - 🎯 **Object Detection**: Detect animals in images with bounding boxes
 - 📍 **Center Point Tracking**: Calculate pixel coordinates of detected objects
 - 📏 **Distance Measurement**: Track movement across video frames
+- 📊 **Power BI Reporting**: Visualize workflow outputs and results
+- 🧾 **Example Outputs**: Sample center-coordinate run output included
 
 ## Prerequisites
 
@@ -118,6 +122,10 @@ Animal-Detector/
 │           ├── results.csv    # Training metrics
 │           ├── results.png    # Training curves
 │           └── *.jpg          # Validation predictions
+├── reports/                   # Power BI report(s)
+│   └── Animal-Detector.pbix   # Project report
+├── outputs/                   # Example outputs
+│   └── center_coordinates_example.csv  # Sample run of center coordinates
 └── README.md                  # This file
 ```
 
@@ -128,6 +136,8 @@ After training, you'll find:
 - **Training metrics**: Loss curves, precision, recall, mAP scores
 - **Validation images**: Predictions on validation set
 - **Confusion matrix**: Model performance visualization
+- **Power BI report**: `reports/Animal-Detector.pbix`
+- **Example center coordinates**: `outputs/center_coordinates_example.csv`
 
 ## Tips and Best Practices
 
