@@ -146,7 +146,7 @@ After training, you'll find:
 - **Out of memory**: Reduce batch size or use a smaller model (yolov8n)
 - **Poor detection**: Add more diverse training data or train for more epochs
 - **Overfitting**: Reduce epochs or add data augmentation
-- **Import errors**: Ensure all dependencies are installed with `pip install -r requirements.txt`
+- **Import errors**: Ensure all dependencies are installed with `pip install ultralytics opencv-python jupyter`
 
 ## Contributing
 
