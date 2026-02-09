@@ -13,22 +13,11 @@ This project uses YOLOv8 (You Only Look Once) to detect and track animals in vid
 - Reviewing results in a Power BI report
 - Inspecting an example run of center-coordinate outputs
 
-## Features
-
-- 🎥 **Video Frame Extraction**: Automatically extract frames from multiple videos
-- 🏷️ **YOLO Dataset Preparation**: Organize labeled data into train/validation splits
-- 🤖 **Custom Model Training**: Train YOLOv8 on your own animal dataset
-- 🎯 **Object Detection**: Detect animals in images with bounding boxes
-- 📍 **Center Point Tracking**: Calculate pixel coordinates of detected objects
-- 📏 **Distance Measurement**: Track movement across video frames
-- 📊 **Power BI Reporting**: Visualize workflow outputs and results
-- 🧾 **Example Outputs**: Sample center-coordinate run output included
 
 ## Prerequisites
 
 - Python 3.7 or higher
 - Jupyter Notebook or JupyterLab
-- Basic understanding of object detection and YOLO format
 
 ## Installation
 
