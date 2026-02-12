@@ -55,6 +55,7 @@ Configure your project paths in the notebook:
 ### Step 3: Annotate Your Data
 
 Use a YOLO-compatible labeling tool to annotate the extracted frames:
+- [MakeSenseAi](https://www.makesense.ai/) (this is what I used, without the ai tooling)
 - [LabelImg](https://github.com/heartexlabs/labelImg)
 - [Roboflow](https://roboflow.com/)
 
