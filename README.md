@@ -57,7 +57,6 @@ Configure your project paths in the notebook:
 Use a YOLO-compatible labeling tool to annotate the extracted frames:
 - [LabelImg](https://github.com/heartexlabs/labelImg)
 - [Roboflow](https://roboflow.com/)
-- [CVAT](https://github.com/opencv/cvat)
 
 Annotations should be in YOLO format (`.txt` files with class and bounding box coordinates).
 
@@ -158,7 +157,6 @@ This project is open source and available under the MIT License.
 ## Acknowledgments
 
 - Built with [Ultralytics YOLOv8](https://github.com/ultralytics/ultralytics)
-- Powered by [OpenCV](https://opencv.org/) for video processing
 
 ## Contact
 
