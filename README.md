@@ -13,6 +13,36 @@ This project uses YOLOv8 (You Only Look Once) to detect and track animals in vid
 - Reviewing results in a Power BI report
 - Inspecting an example run of center-coordinate outputs
 
+## Recent Changes
+
+- **Added `detector.ipynb`**: Dedicated inference notebook for videos, individual frames, or mixed folders with configurable output FPS and annotated video generation.
+- **Implemented video input configuration**: Supports input types (`'video'`, `'frames'`, `'folder'`) and produces labeled outputs with class names and confidence scores.
+- **Improved inference robustness**: Added stronger input/model validation, deterministic output run naming, safer video/image output handling, and consistent CSV summary generation.
+- **Hardened `detector_trainer.ipynb` logic**: Added path and parameter validation, safer model initialization, train/val split guardrails, and resilient fallback behavior for exports and optional views.
+- **Updated documentation**: Clarified workflow boundaries and usage expectations across notebooks.
+
+**Author**: GitHub Copilot  
+**Review Status**: Human reviewed
+
+## Which Notebook to Use
+
+- Use `detector_trainer.ipynb` when you need to prepare data, train/validate models, and generate training outputs.
+- Use `detector.ipynb` when you already have weights and want inference-only workflows (video, frames, mixed folders, labeled output video, and CSV summaries).
+- Keep both notebooks if you do both model development and production-style inference; keep only `detector.ipynb` if you only run detection.
+
+## Quick Start Matrix
+
+| Task | Notebook | Where to Start |
+|---|---|---|
+| Prepare dataset folders and split labels/images | `detector_trainer.ipynb` | Step 1 → Step 3 |
+| Extract evenly spaced frames from raw videos | `detector_trainer.ipynb` | Step 2 |
+| Train or re-train a model | `detector_trainer.ipynb` | Step 4 |
+| Validate model and inspect training metrics | `detector_trainer.ipynb` | Step 4 |
+| Run inference on a single image/folder (trainer flow) | `detector_trainer.ipynb` | Step 5 |
+| Measure movement distance across ordered frames | `detector_trainer.ipynb` | Step 6 |
+| Run inference on video, frame folder, or mixed folder | `detector.ipynb` | Cells 2–9 (config → processing) |
+| Generate labeled output video at target FPS | `detector.ipynb` | Processing cell + FPS helper functions |
+| Export per-frame center/confidence/distance CSV | `detector.ipynb` | Final summary/export cell |
 
 ## Prerequisites
 
@@ -96,11 +126,20 @@ Track animal movement across video frames:
 3. Calculate distances between detected positions
 4. Results can be exported to CSV for further analysis
 
+### Inference with Video Support
+
+For direct inference on videos, individual frames, or mixed folders, use `detector.ipynb`:
+1. Configure input type (`'video'`, `'frames'`, or `'folder'`) and path
+2. Set output FPS and video path
+3. Run the notebook to generate annotated videos with labels and confidences
+4. Review center coordinates and distances in the output CSV
+
 ## File Structure
 
 ```
 Animal-Detector/
 ├── detector_trainer.ipynb    # Main training and inference notebook
+├── detector.ipynb            # Dedicated inference notebook for video processing
 ├── yolov8n.pt                 # Pre-trained YOLOv8 nano model
 ├── runs/                      # Training outputs
 │   └── detect/
